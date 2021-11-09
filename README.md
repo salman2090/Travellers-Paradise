@@ -1,10 +1,10 @@
 <h1>Project Title: Traveller's Paradise</h1>
 
-<h3>Site Link: https://medicare-hospitals-ltd.web.app/ </h3>
+<h3>Site Link: https://traveller-s-paradise.web.app/</h3>
 
 <h3>About the project:</h3>
 
-<p>This project is mainly a Travel Agency related website where we can provide our client convenient service. Our client can choose their preffered services and check the details by browsing this website to make his decision comfortably.</p>
+<p>This project is mainly a Travel Agency related website where we can provide our client convenient travel service. Our client can choose their preffered services and check the details by browsing this website to make his decision comfortably.</p>
 
 <ul>
     <li>Our travel agency offers a range of different services.</li>

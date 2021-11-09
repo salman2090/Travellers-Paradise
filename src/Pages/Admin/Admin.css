@@ -3,3 +3,17 @@
     grid-template-columns: 1fr 4fr;
     
 }
+
+/* Make it Responsive*/
+
+@media only screen and (max-width:688px) {
+    .admin-container{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+@media only screen and (min-width:689px) and (max-width:991px) {
+    .admin-container{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

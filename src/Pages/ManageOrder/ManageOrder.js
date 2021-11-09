@@ -11,7 +11,7 @@ const ManageOrder = () => {
     console.log(status);
 
     const handleUpdate = (id) => {
-        fetch(`http://localhost:5000/updateStatus/${id}`, {
+        fetch(`https://morning-mesa-04735.herokuapp.com/updateStatus/${id}`, {
             method: "PUT",
             headers: {"content-type": "application/json"},
             body: JSON.stringify({status})
@@ -19,7 +19,7 @@ const ManageOrder = () => {
         console.log(id)
     }
     useEffect(() => {
-        fetch("http://localhost:5000/allOrders")
+        fetch("https://morning-mesa-04735.herokuapp.com/allOrders")
             .then(res => res.json())
             .then(data => setOrders(data))
     } ,[]);

@@ -10,7 +10,7 @@ const Booking = () => {
     const email = sessionStorage.getItem("email");
 
     useEffect(() => {
-        fetch(`http://localhost:5000/singleService/${serviceId}`)
+        fetch(`https://morning-mesa-04735.herokuapp.com/singleService/${serviceId}`)
             .then(res => res.json())
             .then(data => setService(data));
     }, []);
@@ -22,14 +22,14 @@ const Booking = () => {
         data.email = email;
         data.status = "pending";
 
-        fetch("http://localhost:5000/confirmOrder", {
+        fetch("https://morning-mesa-04735.herokuapp.com/confirmOrder", {
             method: "POST",
-            headers: {"content-type": "application/json",},
+            headers: {"content-type": "application/json"},
             body: JSON.stringify(data)
         })
             .then(res => res.json())
             .then(result => console.log(result));
-        console.log(data);
+
     }
     return (
         <div>
@@ -39,7 +39,7 @@ const Booking = () => {
                     <img className="w-75 mb-3" src={service?.image} alt="" />
                     <h2>{service?.name}</h2>
                     <p>{service?.description}</p>
-                    <h3>{service?.price}</h3>
+                    <h3>Cost: {service?.price}</h3>
                 </div>
 
                 <div>
@@ -59,7 +59,7 @@ const Booking = () => {
                         
                         {errors.exampleRequired && <span>This field is required</span>}
                         
-                        <input type="submit" value="Order" className="btn btn-success mb-5"/>
+                        <input type="submit" value="Order Now" className="btn btn-success mb-5"/>
                     </form>
                 </div>
             </div>

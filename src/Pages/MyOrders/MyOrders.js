@@ -8,13 +8,13 @@ const MyOrders = () => {
     const [control, setControl] = useState(false);
 
     useEffect(() => {
-        fetch(`http://localhost:5000/myOrder/${email}`)
+        fetch(`https://morning-mesa-04735.herokuapp.com/myOrder/${email}`)
             .then(res => res.json())
             .then(data => setServices(data))
     },[control])
 
     const handleDelete = (id) => {
-        fetch(`http://localhost:5000/deleteOrder/${id}`,{
+        fetch(`https://morning-mesa-04735.herokuapp.com/deleteOrder/${id}`,{
             method:"DELETE",
         })
             .then(res => res.json())
@@ -23,12 +23,11 @@ const MyOrders = () => {
                     setControl(!control);
                 }
             });
-        console.log(id);
     }
     return (
         <div>
-            <h2>My Orders</h2>
-            <div className="services">
+            <h2 className="mt-5">My Orders</h2>
+            <div className="orders-container">
                 {services?.map((service) =>(
                     <div>
                         <Card border="light" className="card-body mx-3 mt-5 shadow p-3 mb-5 bg-body rounded-3" >
