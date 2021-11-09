@@ -1,0 +1,41 @@
+.heading-text{
+    color:maroon;  
+}
+.card-display{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    text-align: left;
+}
+.card-decoration{
+    margin: 50px;
+    padding: 30px;
+    
+}
+.feedback-heading{
+    background-color: maroon;
+    color: white;
+    padding: 20px;   
+}
+.hr-line{
+    margin: auto;
+    display: block;
+    height: 20px;
+    width: 75%;
+    margin-top: 30px;
+    border-bottom: 3px solid maroon;
+}
+
+
+/* Make it Responsive*/
+
+@media only screen and (max-width:688px) {
+    .card-display{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+@media only screen and (min-width:689px) and (max-width:991px) {
+    .card-display{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
